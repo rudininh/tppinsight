@@ -1,0 +1,147 @@
+{
+    "meta": {
+        "path": "/superadmin/cuti",
+        "fetched_at": "2026-06-10T03:27:19.009512Z",
+        "redacted": true
+    },
+    "cuti": {
+        "title": "PRESENSI",
+        "table_count": 1,
+        "tables": [
+            {
+                "index": 0,
+                "headers": [
+                    "#",
+                    "Nama/Nip",
+                    "Mulai - Selesai",
+                    "Ket",
+                    "Dibuat",
+                    "Aksi"
+                ],
+                "row_count": 15,
+                "rows": [
+                    {
+                        "#": "1",
+                        "Nama/Nip": "19*****************************************RP",
+                        "Mulai - Selesai": "29 May 2026 s/d 29 May 2026",
+                        "Ket": "Cuti Tahunan",
+                        "Dibuat": "2026-06-10 11:26:18",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "2",
+                        "Nama/Nip": "19***********************************.M",
+                        "Mulai - Selesai": "07 May 2026 s/d 08 May 2026",
+                        "Ket": "Cuti Tahunan",
+                        "Dibuat": "2026-06-10 11:17:57",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "3",
+                        "Nama/Nip": "19***********************************T.",
+                        "Mulai - Selesai": "04 May 2026 s/d 07 May 2026",
+                        "Ket": "Cuti Tahunan",
+                        "Dibuat": "2026-06-10 11:17:18",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "4",
+                        "Nama/Nip": "19******************************************H.",
+                        "Mulai - Selesai": "11 May 2026 s/d 13 May 2026",
+                        "Ket": "Tugas Kantor/Dinas/SPPD",
+                        "Dibuat": "2026-06-10 11:17:16",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "5",
+                        "Nama/Nip": "19*****************************ni",
+                        "Mulai - Selesai": "10 Jun 2026 s/d 12 Jun 2026",
+                        "Ket": "Cuti Tahunan",
+                        "Dibuat": "2026-06-10 11:15:21",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "6",
+                        "Nama/Nip": "19*************************MI",
+                        "Mulai - Selesai": "08 Jun 2026 s/d 10 Jun 2026",
+                        "Ket": "Training/Diklat",
+                        "Dibuat": "2026-06-10 11:12:34",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "7",
+                        "Nama/Nip": "19*******************************AN",
+                        "Mulai - Selesai": "09 Jun 2026 s/d 11 Jun 2026",
+                        "Ket": "Tugas Kantor/Dinas/SPPD",
+                        "Dibuat": "2026-06-10 11:10:03",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "8",
+                        "Nama/Nip": "19***********************************Md",
+                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
+                        "Ket": "Tugas Kantor/Dinas/SPPD",
+                        "Dibuat": "2026-06-10 11:08:10",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "9",
+                        "Nama/Nip": "19*******************************Md",
+                        "Mulai - Selesai": "20 May 2026 s/d 20 May 2026",
+                        "Ket": "Sakit",
+                        "Dibuat": "2026-06-10 11:06:27",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "10",
+                        "Nama/Nip": "19**********************DY",
+                        "Mulai - Selesai": "11 May 2026 s/d 11 May 2026",
+                        "Ket": "Sakit",
+                        "Dibuat": "2026-06-10 11:05:41",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "11",
+                        "Nama/Nip": "19******************************E.",
+                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
+                        "Ket": "Tugas Kantor/Dinas/SPPD",
+                        "Dibuat": "2026-06-10 11:05:39",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "12",
+                        "Nama/Nip": "19***************************JI",
+                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
+                        "Ket": "Tugas Kantor/Dinas/SPPD",
+                        "Dibuat": "2026-06-10 11:04:30",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "13",
+                        "Nama/Nip": "19************************************LI",
+                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
+                        "Ket": "Tugas Kantor/Dinas/SPPD",
+                        "Dibuat": "2026-06-10 11:02:51",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "14",
+                        "Nama/Nip": "19*************************SE",
+                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
+                        "Ket": "Tugas Kantor/Dinas/SPPD",
+                        "Dibuat": "2026-06-10 11:01:55",
+                        "Aksi": ""
+                    },
+                    {
+                        "#": "15",
+                        "Nama/Nip": "19******************************.E",
+                        "Mulai - Selesai": "02 Jun 2026 s/d 05 Jun 2026",
+                        "Ket": "Tugas Kantor/Dinas/SPPD",
+                        "Dibuat": "2026-06-10 11:00:02",
+                        "Aksi": ""
+                    }
+                ]
+            }
+        ]
+    }
+}
