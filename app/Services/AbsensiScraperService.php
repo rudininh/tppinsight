@@ -76,10 +76,6 @@ class AbsensiScraperService
         $cutiPage = $this->getCutiPage();
         $success = (bool) ($cutiPage['success'] ?? false);
 
-        if (! $success) {
-            $success = ! $this->isLoginPage($body) && $response->getStatusCode() < 400;
-        }
-
         $this->syncCookiesToLaravelSession();
 
         return [
@@ -145,12 +141,23 @@ class AbsensiScraperService
 
     public function loginAsSkpd(int $skpdId = self::DEFAULT_SKPD_ID): array
     {
+        $listingPath = '/superadmin/skpd';
+        $listingResponse = $this->request('GET', $listingPath);
         $path = $this->skpdLoginPath($skpdId);
-        $response = $this->request('GET', $path);
+        $response = $this->request('GET', $path, [
+            'headers' => [
+                'Referer' => $this->baseUrl . $listingPath,
+            ],
+        ]);
         $body = (string) $response->getBody();
 
         return [
-            'success' => ! $this->isLoginPage($body) && $response->getStatusCode() < 400,
+            'success' => ! $this->isLoginPage($body) && $response->getStatusCode() < 500,
+            'listing' => [
+                'path' => $listingPath,
+                'status_code' => $listingResponse->getStatusCode(),
+                'redirect_history' => $this->redirectHistory($listingResponse),
+            ],
             'path' => $path,
             'status_code' => $response->getStatusCode(),
             'redirect_history' => $this->redirectHistory($response),
@@ -335,7 +342,7 @@ class AbsensiScraperService
 
     protected function skpdLoginPath(int $skpdId): string
     {
-        return '/superadmin/skpd/' . max(1, $skpdId) . '/';
+        return '/superadmin/skpd/' . max(1, $skpdId);
     }
 
     protected function logHttpExchange(string $method, string $uri, ResponseInterface $response): void
