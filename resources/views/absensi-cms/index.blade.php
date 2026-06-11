@@ -42,6 +42,10 @@
                     <i data-lucide="layout-dashboard" class="h-4 w-4"></i>
                     Dashboard
                 </a>
+                <a href="{{ route('cms.laporan-cuti.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
+                    <i data-lucide="file-spreadsheet" class="h-4 w-4"></i>
+                    Laporan Cuti
+                </a>
                 <a href="{{ route('absensi-scraper.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
                     <i data-lucide="braces" class="h-4 w-4"></i>
                     API Scraper
@@ -114,7 +118,7 @@
                             </div>
                             <div>
                                 <h2 class="text-base font-semibold">Ambil Data Cuti</h2>
-                                <p class="text-sm text-zinc-500">Kredensial dipakai untuk request ini saja.</p>
+                                <p class="text-sm text-zinc-500">Login memakai kredensial dari konfigurasi server.</p>
                             </div>
                         </div>
 
@@ -148,15 +152,7 @@
                             </div>
                         @endif
 
-                        <label class="mt-5 block text-sm font-medium text-zinc-700" for="username">Username</label>
-                        <input id="username" name="username" type="text" value="{{ old('username') }}" required
-                            class="mt-2 w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100">
-
-                        <label class="mt-4 block text-sm font-medium text-zinc-700" for="password">Password</label>
-                        <input id="password" name="password" type="password" required
-                            class="mt-2 w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100">
-
-                        <label class="mt-4 block text-sm font-medium text-zinc-700" for="skpd_id">SKPD ID</label>
+                        <label class="mt-5 block text-sm font-medium text-zinc-700" for="skpd_id">SKPD ID</label>
                         <input id="skpd_id" name="skpd_id" type="number" min="1" value="{{ old('skpd_id', 1) }}" required
                             class="mt-2 w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100">
 
