@@ -5,6 +5,8 @@ namespace App\Services;
 use App\Models\AbsensiCutiReport;
 use App\Models\AbsensiDailyReport;
 use App\Models\AbsensiPegawai;
+use App\Models\AbsensiPppk;
+use App\Models\AbsensiPppkReport;
 use Carbon\Carbon;
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
@@ -26,6 +28,7 @@ class AbsensiScraperService
     private const ADMIN_CUTI_PATH = '/admin/cuti';
     private const ADMIN_LAPORAN_PATH = '/admin/laporan';
     private const ADMIN_LAPORAN_TANGGAL_PATH = '/admin/laporan/tanggal';
+    private const ADMIN_PPPK_PATH = '/admin/pppk';
     private const SUPERADMIN_PEGAWAI_PATH = '/superadmin/pegawai';
     private const SENSITIVE_HEADER_KEYWORDS = ['nip', 'nama', 'pegawai', 'nik', 'alamat', 'telepon', 'hp', 'email'];
 
@@ -353,6 +356,112 @@ class AbsensiScraperService
         ];
     }
 
+    public function scrapePppkReports(
+        string $username,
+        string $password,
+        string $dateStart,
+        string $dateEnd,
+        int $startSkpdId = 1,
+        int $endSkpdId = 35
+    ): array {
+        $dateStart = $this->normalizeDateValue($dateStart) ?? now()->toDateString();
+        $dateEnd = $this->normalizeDateValue($dateEnd) ?? $dateStart;
+        $startDate = Carbon::parse($dateStart);
+        $endDate = Carbon::parse($dateEnd);
+        if ($endDate->lt($startDate)) {
+            $endDate = $startDate->copy();
+        }
+
+        $this->resetPortalSession();
+        $auth = $this->authenticatePortal($username, $password);
+        $startSkpdId = max(1, $startSkpdId);
+        $endSkpdId = max($startSkpdId, $endSkpdId);
+        $skpdActions = $this->fetchSkpdLoginActions($startSkpdId, $endSkpdId);
+        $results = [];
+        $storedPppk = 0;
+        $storedReports = 0;
+        $successCount = 0;
+        $failedCount = 0;
+
+        for ($skpdId = $startSkpdId; $skpdId <= $endSkpdId; $skpdId++) {
+            try {
+                if ($skpdId > $startSkpdId) {
+                    $this->resetPortalSession();
+                    $this->authenticatePortal($username, $password);
+                }
+
+                $skpdLogin = $this->loginAsSkpd($skpdId, $skpdActions[$skpdId] ?? null);
+                $pppk = $this->getPppkData($skpdId, true);
+                $storedForSkpd = (int) ($pppk['stored_rows'] ?? 0);
+                $storedReportsForSkpd = 0;
+
+                foreach (($pppk['data']['rows'] ?? []) as $person) {
+                    $pppkId = (string) ($person['pppk_id'] ?? '');
+                    if ($pppkId === '') {
+                        continue;
+                    }
+
+                    $months = [];
+                    for ($date = $startDate->copy()->startOfMonth(); $date->lte($endDate); $date->addMonth()) {
+                        $months[$date->format('Y-m')] = [$date->format('m'), $date->format('Y')];
+                    }
+
+                    foreach ($months as [$month, $year]) {
+                        $report = $this->getPppkMonthlyPresensi($skpdId, $person, $month, $year, true, $dateStart, $dateEnd);
+                        $storedReportsForSkpd += (int) ($report['stored_rows'] ?? 0);
+                    }
+                }
+
+                $storedPppk += $storedForSkpd;
+                $storedReports += $storedReportsForSkpd;
+                $successCount++;
+                $results[] = [
+                    'skpd_id' => $skpdId,
+                    'success' => true,
+                    'stored_pppk_rows' => $storedForSkpd,
+                    'stored_report_rows' => $storedReportsForSkpd,
+                    'skpd_login' => $skpdLogin,
+                ];
+            } catch (Throwable $throwable) {
+                $failedCount++;
+                $results[] = [
+                    'skpd_id' => $skpdId,
+                    'success' => false,
+                    'message' => $throwable->getMessage(),
+                ];
+
+                Log::error('Absensi PPPK fetch failed', [
+                    'skpd_id' => $skpdId,
+                    'message' => $throwable->getMessage(),
+                ]);
+            }
+        }
+
+        return [
+            'success' => $successCount > 0 && $failedCount === 0,
+            'partial_success' => $successCount > 0 && $failedCount > 0,
+            'login' => [
+                'status_code' => $auth['response']->getStatusCode(),
+                'redirect_history' => $this->redirectHistory($auth['response']),
+                'body_preview' => $this->preview($auth['body']),
+            ],
+            'range' => [
+                'date_start' => $dateStart,
+                'date_end' => $dateEnd,
+                'skpd_start' => $startSkpdId,
+                'skpd_end' => $endSkpdId,
+            ],
+            'summary' => [
+                'success_count' => $successCount,
+                'failed_count' => $failedCount,
+                'stored_pppk_rows' => $storedPppk,
+                'stored_report_rows' => $storedReports,
+                'stored_rows' => $storedReports,
+            ],
+            'results' => $results,
+        ];
+    }
+
     public function getCutiDataForRange(
         bool $redact = true,
         int $skpdId = self::DEFAULT_SKPD_ID,
@@ -581,6 +690,29 @@ class AbsensiScraperService
         ];
     }
 
+    public function getPppkData(int $skpdId, bool $persistToDatabase = false): array
+    {
+        $response = $this->request('GET', self::ADMIN_PPPK_PATH);
+        $body = (string) $response->getBody();
+        $parsed = $this->parsePppkHtml($body, $skpdId);
+        $storedRows = $persistToDatabase ? $this->storePppkRows($parsed, [
+            'skpd_id' => $skpdId,
+            'fetched_at' => now(),
+        ]) : 0;
+
+        return [
+            'success' => ! $this->isLoginPage($body) && $response->getStatusCode() === 200,
+            'page' => [
+                'path' => self::ADMIN_PPPK_PATH,
+                'status_code' => $response->getStatusCode(),
+                'redirect_history' => $this->redirectHistory($response),
+                'body_preview' => $this->preview($body),
+            ],
+            'data' => $parsed,
+            'stored_rows' => $storedRows,
+        ];
+    }
+
     protected function parseCutiHtml(string $html, bool $redact): array
     {
         $crawler = $this->createCrawler($html, $this->baseUrl . self::ADMIN_CUTI_PATH);
@@ -671,6 +803,165 @@ class AbsensiScraperService
         });
 
         return [
+            'row_count' => count($rows),
+            'rows' => $rows,
+        ];
+    }
+
+    protected function parsePppkHtml(string $html, int $skpdId): array
+    {
+        $crawler = $this->createCrawler($html, $this->baseUrl . self::ADMIN_PPPK_PATH);
+        $skpd = $this->skpdInfo($skpdId);
+        $rows = [];
+
+        $crawler->filter('table tbody tr')->each(function (Crawler $row) use (&$rows, $skpdId, $skpd) {
+            if ($row->filter('td')->count() === 0) {
+                return;
+            }
+
+            $cells = [];
+            $row->filter('td')->each(function (Crawler $cell) use (&$cells) {
+                $cells[] = $this->cellLines($cell);
+            });
+
+            $identity = $cells[1] ?? [];
+            [$nama, $nip] = $this->splitNameAndNip($identity);
+            $jabatan = $this->normalizeText(implode(' ', array_slice($identity, 2)));
+            if ($jabatan === '' && count($identity) === 1) {
+                $text = $this->normalizeText($identity[0]);
+                if (preg_match('/^(.+?)(\d{18})(.+)$/u', $text, $matches)) {
+                    $nama = $this->normalizeText($matches[1]);
+                    $nip = $this->normalizeText($matches[2]);
+                    $jabatan = $this->normalizeText($matches[3]);
+                }
+            }
+
+            $presensiUrl = null;
+            $pppkId = null;
+            $row->filter('a[href]')->each(function (Crawler $link) use (&$presensiUrl, &$pppkId) {
+                $href = trim((string) $link->attr('href'));
+                if ($href === '' || ! str_contains($href, '/presensi')) {
+                    return;
+                }
+
+                $presensiUrl = $href;
+                if (preg_match('/\/admin\/pppk\/([^\/]+)\/presensi/i', $href, $matches)) {
+                    $pppkId = $matches[1];
+                }
+            });
+
+            $rows[] = [
+                'nomor' => $this->normalizeText($cells[0][0] ?? ''),
+                'pppk_id' => $pppkId,
+                'skpd_id' => $skpdId,
+                'kode_skpd' => $skpd['kode'],
+                'nama_skpd' => $skpd['nama'],
+                'nip' => $nip,
+                'nama' => $nama,
+                'jabatan' => $jabatan,
+                'pangkat' => $this->normalizeText(implode(' ', $cells[2] ?? [])),
+                'tanggal_lahir' => $this->normalizeDateValue($cells[3][0] ?? null),
+                'jenis_presensi' => $this->normalizeText($cells[4][0] ?? ''),
+                'status_asn' => $this->normalizeText($cells[5][0] ?? ''),
+                'presensi_url' => $presensiUrl,
+            ];
+        });
+
+        return [
+            'skpd_id' => $skpdId,
+            'kode_skpd' => $skpd['kode'],
+            'nama_skpd' => $skpd['nama'],
+            'row_count' => count($rows),
+            'rows' => $rows,
+        ];
+    }
+
+    public function getPppkMonthlyPresensi(
+        int $skpdId,
+        array $person,
+        string $month,
+        string $year,
+        bool $persistToDatabase = false,
+        ?string $dateStart = null,
+        ?string $dateEnd = null
+    ): array {
+        $pppkId = (string) ($person['pppk_id'] ?? '');
+        if ($pppkId === '') {
+            return ['success' => false, 'message' => 'ID PPPK kosong.', 'stored_rows' => 0];
+        }
+
+        $path = self::ADMIN_PPPK_PATH . '/' . $pppkId . '/presensi/' . str_pad($month, 2, '0', STR_PAD_LEFT) . '/' . $year;
+        $response = $this->request('GET', $path);
+        $body = (string) $response->getBody();
+        $parsed = $this->parsePppkPresensiHtml($body, $skpdId, $person);
+        $storedRows = $persistToDatabase ? $this->storePppkReportRows($parsed, [
+            'skpd_id' => $skpdId,
+            'fetched_at' => now(),
+            'date_start' => $dateStart,
+            'date_end' => $dateEnd,
+        ]) : 0;
+
+        return [
+            'success' => ! $this->isLoginPage($body) && $response->getStatusCode() === 200,
+            'page' => [
+                'path' => $path,
+                'status_code' => $response->getStatusCode(),
+                'redirect_history' => $this->redirectHistory($response),
+                'body_preview' => $this->preview($body),
+            ],
+            'report' => $parsed,
+            'stored_rows' => $storedRows,
+        ];
+    }
+
+    protected function parsePppkPresensiHtml(string $html, int $skpdId, array $person): array
+    {
+        $crawler = $this->createCrawler($html, $this->baseUrl . self::ADMIN_PPPK_PATH);
+        $skpd = $this->skpdInfo($skpdId);
+        $rows = [];
+
+        $reportTable = $crawler->filter('table')->reduce(function (Crawler $table) {
+            $text = strtolower($this->normalizeText($table->text('')));
+
+            return str_contains($text, 'tanggal')
+                && str_contains($text, 'jam masuk')
+                && str_contains($text, 'jam pulang');
+        })->first();
+
+        if ($reportTable->count() > 0) {
+            $reportTable->filter('tbody tr')->each(function (Crawler $row) use (&$rows) {
+                $cells = [];
+                $row->filter('td')->each(function (Crawler $cell) use (&$cells) {
+                    $cells[] = $this->normalizeText($cell->text(''));
+                });
+
+                $nomor = $this->normalizeText($cells[0] ?? '');
+                $tanggal = $this->normalizeDateValue($cells[1] ?? null);
+                if ($nomor === '' || ! ctype_digit($nomor) || $tanggal === null) {
+                    return;
+                }
+
+                $rows[] = [
+                    'nomor' => $nomor,
+                    'tanggal' => $tanggal,
+                    'hari' => $this->normalizeText($cells[2] ?? ''),
+                    'jam_masuk' => $this->normalizeText($cells[3] ?? ''),
+                    'jam_pulang' => $this->normalizeText($cells[4] ?? ''),
+                    'keterangan' => $this->normalizeText($cells[5] ?? ''),
+                    'telat' => is_numeric($cells[6] ?? null) ? (int) $cells[6] : null,
+                    'lebih_awal' => is_numeric($cells[7] ?? null) ? (int) $cells[7] : null,
+                ];
+            });
+        }
+
+        return [
+            'pppk_id' => $person['pppk_id'] ?? null,
+            'skpd_id' => $skpdId,
+            'kode_skpd' => $skpd['kode'],
+            'nama_skpd' => $skpd['nama'],
+            'nip' => $person['nip'] ?? null,
+            'nama_pegawai' => $person['nama'] ?? null,
+            'jabatan' => $person['jabatan'] ?? null,
             'row_count' => count($rows),
             'rows' => $rows,
         ];
@@ -795,6 +1086,141 @@ class AbsensiScraperService
         }
 
         return $stored;
+    }
+
+    protected function storePppkRows(array $report, array $meta): int
+    {
+        $stored = 0;
+        $rows = is_array($report['rows'] ?? null) ? $report['rows'] : [];
+        $skpdId = (int) ($report['skpd_id'] ?? $meta['skpd_id'] ?? self::DEFAULT_SKPD_ID);
+
+        foreach ($rows as $row) {
+            if (! is_array($row)) {
+                continue;
+            }
+
+            $rowHash = hash('sha256', json_encode([
+                'skpd_id' => $skpdId,
+                'pppk_id' => $row['pppk_id'] ?? null,
+                'nip' => $row['nip'] ?? null,
+            ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+
+            $nip = ($row['nip'] ?? null) ?: null;
+            $unitKerja = $this->setdaPppkUnitKerjaByNip($nip);
+
+            AbsensiPppk::query()->updateOrCreate(
+                $nip !== null ? ['nip' => $nip] : ['row_hash' => $rowHash],
+                [
+                    'pppk_id' => $row['pppk_id'] ?: null,
+                    'skpd_id' => $skpdId,
+                    'kode_skpd' => $row['kode_skpd'] ?? null,
+                    'nama_skpd' => $row['nama_skpd'] ?? null,
+                    'unit_kerja' => $unitKerja,
+                    'nip' => $nip,
+                    'nama' => $row['nama'] ?: null,
+                    'jabatan' => $row['jabatan'] ?: null,
+                    'pangkat' => $row['pangkat'] ?: null,
+                    'tanggal_lahir' => $row['tanggal_lahir'] ?: null,
+                    'jenis_presensi' => $row['jenis_presensi'] ?: null,
+                    'status_asn' => $row['status_asn'] ?: null,
+                    'presensi_url' => $row['presensi_url'] ?: null,
+                    'row_data' => $row,
+                    'fetched_at' => $meta['fetched_at'] ?? now(),
+                ]
+            );
+            $stored++;
+        }
+
+        return $stored;
+    }
+
+    protected function storePppkReportRows(array $report, array $meta): int
+    {
+        $stored = 0;
+        $rows = is_array($report['rows'] ?? null) ? $report['rows'] : [];
+        $skpdId = (int) ($report['skpd_id'] ?? $meta['skpd_id'] ?? self::DEFAULT_SKPD_ID);
+        $dateStart = $this->normalizeDateValue($meta['date_start'] ?? null);
+        $dateEnd = $this->normalizeDateValue($meta['date_end'] ?? null);
+
+        foreach ($rows as $row) {
+            if (! is_array($row)) {
+                continue;
+            }
+
+            $tanggal = $this->normalizeDateValue((string) ($row['tanggal'] ?? ''));
+            if ($tanggal === null) {
+                continue;
+            }
+
+            if ($dateStart !== null && $tanggal < $dateStart) {
+                continue;
+            }
+
+            if ($dateEnd !== null && $tanggal > $dateEnd) {
+                continue;
+            }
+
+            $rowHash = hash('sha256', json_encode([
+                'skpd_id' => $skpdId,
+                'pppk_id' => $report['pppk_id'] ?? null,
+                'tanggal' => $tanggal,
+            ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+
+            $nip = ($report['nip'] ?? null) ?: null;
+            $unitKerja = $this->setdaPppkUnitKerjaByNip($nip);
+
+            AbsensiPppkReport::query()->updateOrCreate(
+                ['row_hash' => $rowHash],
+                [
+                    'pppk_id' => $report['pppk_id'] ?: null,
+                    'skpd_id' => $skpdId,
+                    'kode_skpd' => $report['kode_skpd'] ?? null,
+                    'nama_skpd' => $report['nama_skpd'] ?? null,
+                    'unit_kerja' => $unitKerja,
+                    'nip' => $nip,
+                    'nama_pegawai' => ($report['nama_pegawai'] ?? null) ?: null,
+                    'jabatan' => ($report['jabatan'] ?? null) ?: null,
+                    'tanggal' => $tanggal,
+                    'hari' => $row['hari'] ?: null,
+                    'jam_masuk' => $row['jam_masuk'] ?: null,
+                    'jam_pulang' => $row['jam_pulang'] ?: null,
+                    'keterangan' => $row['keterangan'] ?: null,
+                    'telat' => $row['telat'] ?? null,
+                    'lebih_awal' => $row['lebih_awal'] ?? null,
+                    'row_data' => $row,
+                    'fetched_at' => $meta['fetched_at'] ?? now(),
+                ]
+            );
+            $stored++;
+        }
+
+        return $stored;
+    }
+
+    private function setdaPppkUnitKerjaByNip(?string $nip): ?string
+    {
+        if ($nip === null || $nip === '') {
+            return null;
+        }
+
+        return [
+            '199305112024212030' => 'Sekretariat Daerah - Bagian Pemerintahan',
+            '199205312024211006' => 'Sekretariat Daerah - Bagian Pengadaan Barang dan Jasa',
+            '199802062024211003' => 'Sekretariat Daerah - Bagian Pengadaan Barang dan Jasa',
+            '198708192025212001' => 'Sekretariat Daerah - Bagian Pengadaan Barang dan Jasa',
+            '199808292025211003' => 'Sekretariat Daerah - Bagian Umum',
+            '199305252025211010' => 'Sekretariat Daerah - Bagian Pemerintahan',
+            '197801012025212009' => 'Sekretariat Daerah - Bagian Kesejahteraan Rakyat',
+            '199901212025211003' => 'Sekretariat Daerah - Bagian Umum',
+            '200008312025211001' => 'Sekretariat Daerah - Bagian Protokol dan Komunikasi Pimpinan',
+            '199610302025211002' => 'Sekretariat Daerah - Bagian Organisasi',
+            '199911112025211003' => 'Sekretariat Daerah - Bagian Perekonomian dan Sumber Daya Alam',
+            '199410232025212002' => 'Sekretariat Daerah - Bagian Protokol dan Komunikasi Pimpinan',
+            '198304112025211007' => 'Sekretariat Daerah - Bagian Protokol dan Komunikasi Pimpinan',
+            '199502282025211004' => 'Sekretariat Daerah - Bagian Umum',
+            '199610282025211004' => 'Sekretariat Daerah - Bagian Umum',
+            '198909292025212008' => 'Sekretariat Daerah - Bagian Umum',
+        ][$nip] ?? null;
     }
 
     protected function extractDailyReportPrintForm(string $html): array

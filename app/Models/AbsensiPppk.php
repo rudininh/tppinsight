@@ -4,19 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AbsensiPegawai extends Model
+class AbsensiPppk extends Model
 {
     protected $fillable = [
-        'pegawai_id',
+        'pppk_id',
+        'skpd_id',
+        'kode_skpd',
+        'nama_skpd',
+        'unit_kerja',
         'nip',
         'nama',
-        'pangkat_golongan',
-        'skpd',
-        'unit_kerja',
         'jabatan',
-        'puskesmas',
-        'device_id',
-        'history_url',
+        'pangkat',
+        'tanggal_lahir',
+        'jenis_presensi',
+        'status_asn',
+        'presensi_url',
         'row_data',
         'row_hash',
         'fetched_at',
@@ -25,6 +28,7 @@ class AbsensiPegawai extends Model
     protected function casts(): array
     {
         return [
+            'tanggal_lahir' => 'date',
             'row_data' => 'array',
             'fetched_at' => 'datetime',
         ];

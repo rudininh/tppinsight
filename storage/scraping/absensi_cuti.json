@@ -1,8 +1,11 @@
 {
     "meta": {
-        "path": "/superadmin/cuti",
-        "fetched_at": "2026-06-10T03:27:19.009512Z",
-        "redacted": true
+        "path": "/admin/cuti",
+        "skpd_id": 35,
+        "date_start": "2026-01-01",
+        "date_end": "2026-06-12",
+        "fetched_at": "2026-06-12T05:33:39.253076Z",
+        "redacted": false
     },
     "cuti": {
         "title": "PRESENSI",
@@ -12,133 +15,2553 @@
                 "index": 0,
                 "headers": [
                     "#",
-                    "Nama/Nip",
-                    "Mulai - Selesai",
-                    "Ket",
-                    "Dibuat",
+                    "NIP/Nama",
+                    "Tgl Mulai",
+                    "Tgl Selesai",
+                    "Jenis",
+                    "Dokumen",
+                    "Keterangan",
                     "Aksi"
                 ],
-                "row_count": 15,
+                "row_count": 94,
                 "rows": [
                     {
                         "#": "1",
-                        "Nama/Nip": "19*****************************************RP",
-                        "Mulai - Selesai": "29 May 2026 s/d 29 May 2026",
-                        "Ket": "Cuti Tahunan",
-                        "Dibuat": "2026-06-10 11:26:18",
-                        "Aksi": ""
+                        "NIP/Nama": "NONIK MUTHIA, A.Md199601162020122017",
+                        "Tgl Mulai": "7 Mei 2026",
+                        "Tgl Selesai": "7 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129705"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129705/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129705"
+                        }
                     },
                     {
                         "#": "2",
-                        "Nama/Nip": "19***********************************.M",
-                        "Mulai - Selesai": "07 May 2026 s/d 08 May 2026",
-                        "Ket": "Cuti Tahunan",
-                        "Dibuat": "2026-06-10 11:17:57",
-                        "Aksi": ""
+                        "NIP/Nama": "Hj. INDIRIYANI, SE197602221998032006",
+                        "Tgl Mulai": "29 Mei 2026",
+                        "Tgl Selesai": "29 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129253"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129253/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129253"
+                        }
                     },
                     {
                         "#": "3",
-                        "Nama/Nip": "19***********************************T.",
-                        "Mulai - Selesai": "04 May 2026 s/d 07 May 2026",
-                        "Ket": "Cuti Tahunan",
-                        "Dibuat": "2026-06-10 11:17:18",
-                        "Aksi": ""
+                        "NIP/Nama": "GUSTI EKASARI. F, A.Md., S.Ak.198702042010012008",
+                        "Tgl Mulai": "22 Mei 2026",
+                        "Tgl Selesai": "22 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129044"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129044/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129044"
+                        }
                     },
                     {
                         "#": "4",
-                        "Nama/Nip": "19******************************************H.",
-                        "Mulai - Selesai": "11 May 2026 s/d 13 May 2026",
-                        "Ket": "Tugas Kantor/Dinas/SPPD",
-                        "Dibuat": "2026-06-10 11:17:16",
-                        "Aksi": ""
+                        "NIP/Nama": "PRANANING DYAH SULIH SEKARRATRI, S.Tr.Par199801262020122008",
+                        "Tgl Mulai": "4 Mei 2026",
+                        "Tgl Selesai": "22 Mei 2026",
+                        "Jenis": "Cuti Melahirkan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Melahirkan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129042"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129042/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129042"
+                        }
                     },
                     {
                         "#": "5",
-                        "Nama/Nip": "19*****************************ni",
-                        "Mulai - Selesai": "10 Jun 2026 s/d 12 Jun 2026",
-                        "Ket": "Cuti Tahunan",
-                        "Dibuat": "2026-06-10 11:15:21",
-                        "Aksi": ""
+                        "NIP/Nama": "JIHAD MUNGGARAN, S.Pd.199904152022031004",
+                        "Tgl Mulai": "18 Mei 2026",
+                        "Tgl Selesai": "29 Mei 2026",
+                        "Jenis": "Cuti Alasan Penting",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Mendampingi istri melahitkan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129040"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129040/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129040"
+                        }
                     },
                     {
                         "#": "6",
-                        "Nama/Nip": "19*************************MI",
-                        "Mulai - Selesai": "08 Jun 2026 s/d 10 Jun 2026",
-                        "Ket": "Training/Diklat",
-                        "Dibuat": "2026-06-10 11:12:34",
-                        "Aksi": ""
+                        "NIP/Nama": "GUSTI EKASARI. F, A.Md., S.Ak.198702042010012008",
+                        "Tgl Mulai": "18 Mei 2026",
+                        "Tgl Selesai": "19 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129039"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129039/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129039"
+                        }
                     },
                     {
                         "#": "7",
-                        "Nama/Nip": "19*******************************AN",
-                        "Mulai - Selesai": "09 Jun 2026 s/d 11 Jun 2026",
-                        "Ket": "Tugas Kantor/Dinas/SPPD",
-                        "Dibuat": "2026-06-10 11:10:03",
-                        "Aksi": ""
+                        "NIP/Nama": "ORISA HARTANTY, SE, M.E.198708102020122013",
+                        "Tgl Mulai": "25 Mei 2026",
+                        "Tgl Selesai": "26 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129038"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129038/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129038"
+                        }
                     },
                     {
                         "#": "8",
-                        "Nama/Nip": "19***********************************Md",
-                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
-                        "Ket": "Tugas Kantor/Dinas/SPPD",
-                        "Dibuat": "2026-06-10 11:08:10",
-                        "Aksi": ""
+                        "NIP/Nama": "ORISA HARTANTY, SE, M.E.198708102020122013",
+                        "Tgl Mulai": "18 Mei 2026",
+                        "Tgl Selesai": "22 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129037"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129037/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129037"
+                        }
                     },
                     {
                         "#": "9",
-                        "Nama/Nip": "19*******************************Md",
-                        "Mulai - Selesai": "20 May 2026 s/d 20 May 2026",
-                        "Ket": "Sakit",
-                        "Dibuat": "2026-06-10 11:06:27",
-                        "Aksi": ""
+                        "NIP/Nama": "MUHAMMAD FIKRI HAIKAL, SE199209082020121013",
+                        "Tgl Mulai": "25 Mei 2026",
+                        "Tgl Selesai": "26 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129036"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129036/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129036"
+                        }
                     },
                     {
                         "#": "10",
-                        "Nama/Nip": "19**********************DY",
-                        "Mulai - Selesai": "11 May 2026 s/d 11 May 2026",
-                        "Ket": "Sakit",
-                        "Dibuat": "2026-06-10 11:05:41",
-                        "Aksi": ""
+                        "NIP/Nama": "NONIK MUTHIA, A.Md199601162020122017",
+                        "Tgl Mulai": "14 Mei 2026",
+                        "Tgl Selesai": "14 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129035"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129035/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129035"
+                        }
                     },
                     {
-                        "#": "11",
-                        "Nama/Nip": "19******************************E.",
-                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
-                        "Ket": "Tugas Kantor/Dinas/SPPD",
-                        "Dibuat": "2026-06-10 11:05:39",
-                        "Aksi": ""
+                        "#": "1",
+                        "NIP/Nama": "KIKY SUGIARTI198002222012122003",
+                        "Tgl Mulai": "25 Mei 2026",
+                        "Tgl Selesai": "29 Mei 2026",
+                        "Jenis": "Cuti Sakit",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Opname di RSCM Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129026"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129026/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129026"
+                        }
                     },
                     {
-                        "#": "12",
-                        "Nama/Nip": "19***************************JI",
-                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
-                        "Ket": "Tugas Kantor/Dinas/SPPD",
-                        "Dibuat": "2026-06-10 11:04:30",
-                        "Aksi": ""
+                        "#": "2",
+                        "NIP/Nama": "KIKY SUGIARTI198002222012122003",
+                        "Tgl Mulai": "18 Mei 2026",
+                        "Tgl Selesai": "22 Mei 2026",
+                        "Jenis": "Cuti Sakit",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Opname di RSCM Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129025"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129025/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129025"
+                        }
                     },
                     {
-                        "#": "13",
-                        "Nama/Nip": "19************************************LI",
-                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
-                        "Ket": "Tugas Kantor/Dinas/SPPD",
-                        "Dibuat": "2026-06-10 11:02:51",
-                        "Aksi": ""
+                        "#": "3",
+                        "NIP/Nama": "KIKY SUGIARTI198002222012122003",
+                        "Tgl Mulai": "11 Mei 2026",
+                        "Tgl Selesai": "13 Mei 2026",
+                        "Jenis": "Cuti Sakit",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Opname di RSCM Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129024"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129024/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129024"
+                        }
                     },
                     {
-                        "#": "14",
-                        "Nama/Nip": "19*************************SE",
-                        "Mulai - Selesai": "07 Jun 2026 s/d 09 Jun 2026",
-                        "Ket": "Tugas Kantor/Dinas/SPPD",
-                        "Dibuat": "2026-06-10 11:01:55",
-                        "Aksi": ""
+                        "#": "4",
+                        "NIP/Nama": "KIKY SUGIARTI198002222012122003",
+                        "Tgl Mulai": "4 Mei 2026",
+                        "Tgl Selesai": "8 Mei 2026",
+                        "Jenis": "Cuti Sakit",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Opname di RSCM Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129022"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129022/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129022"
+                        }
                     },
                     {
-                        "#": "15",
-                        "Nama/Nip": "19******************************.E",
-                        "Mulai - Selesai": "02 Jun 2026 s/d 05 Jun 2026",
-                        "Ket": "Tugas Kantor/Dinas/SPPD",
-                        "Dibuat": "2026-06-10 11:00:02",
-                        "Aksi": ""
+                        "#": "5",
+                        "NIP/Nama": "MUHAMMAD AFRIANSYAH, ST198110192010011010",
+                        "Tgl Mulai": "11 Mei 2026",
+                        "Tgl Selesai": "12 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129018"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129018/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129018"
+                        }
+                    },
+                    {
+                        "#": "6",
+                        "NIP/Nama": "Gusti Ikromi Akbar, S.STP., MM199306222015071001",
+                        "Tgl Mulai": "21 Mei 2026",
+                        "Tgl Selesai": "22 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129017"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/129017/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/129017"
+                        }
+                    },
+                    {
+                        "#": "7",
+                        "NIP/Nama": "JIHAD MUNGGARAN, S.Pd.199904152022031004",
+                        "Tgl Mulai": "11 Mei 2026",
+                        "Tgl Selesai": "13 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127280"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127280/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127280"
+                        }
+                    },
+                    {
+                        "#": "8",
+                        "NIP/Nama": "JIHAD MUNGGARAN, S.Pd.199904152022031004",
+                        "Tgl Mulai": "4 Mei 2026",
+                        "Tgl Selesai": "7 Mei 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127279"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127279/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127279"
+                        }
+                    },
+                    {
+                        "#": "9",
+                        "NIP/Nama": "KIKY SUGIARTI198002222012122003",
+                        "Tgl Mulai": "28 April 2026",
+                        "Tgl Selesai": "30 April 2026",
+                        "Jenis": "Cuti Sakit",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Opname di RSCM Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127278"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127278/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127278"
+                        }
+                    },
+                    {
+                        "#": "10",
+                        "NIP/Nama": "KIKY SUGIARTI198002222012122003",
+                        "Tgl Mulai": "20 April 2026",
+                        "Tgl Selesai": "27 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "cuti tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127176"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127176/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127176"
+                        }
+                    },
+                    {
+                        "#": "1",
+                        "NIP/Nama": "RIZKY MUTHIA APNI, S.M.197904202009012001",
+                        "Tgl Mulai": "24 April 2026",
+                        "Tgl Selesai": "24 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127160"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127160/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127160"
+                        }
+                    },
+                    {
+                        "#": "2",
+                        "NIP/Nama": "RIZKY MUTHIA APNI, S.M.197904202009012001",
+                        "Tgl Mulai": "13 April 2026",
+                        "Tgl Selesai": "15 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127159"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127159/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127159"
+                        }
+                    },
+                    {
+                        "#": "3",
+                        "NIP/Nama": "YENNY FITRI ANGGRAINI, S. A.B.199503102022032011",
+                        "Tgl Mulai": "23 April 2026",
+                        "Tgl Selesai": "24 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127155"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127155/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127155"
+                        }
+                    },
+                    {
+                        "#": "4",
+                        "NIP/Nama": "GUSTI EKASARI. F, A.Md., S.Ak.198702042010012008",
+                        "Tgl Mulai": "17 April 2026",
+                        "Tgl Selesai": "17 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127152"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127152/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127152"
+                        }
+                    },
+                    {
+                        "#": "5",
+                        "NIP/Nama": "GUSTI EKASARI. F, A.Md., S.Ak.198702042010012008",
+                        "Tgl Mulai": "13 April 2026",
+                        "Tgl Selesai": "14 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127151"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127151/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127151"
+                        }
+                    },
+                    {
+                        "#": "6",
+                        "NIP/Nama": "MUHAMMAD RAHMATULLAH, S. AP197905072007011008",
+                        "Tgl Mulai": "6 April 2026",
+                        "Tgl Selesai": "7 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Hulu Sungai Tengah",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127150"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127150/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127150"
+                        }
+                    },
+                    {
+                        "#": "7",
+                        "NIP/Nama": "FANINA RACHMI, S.Pd197610312000062001",
+                        "Tgl Mulai": "28 April 2026",
+                        "Tgl Selesai": "29 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127112"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127112/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127112"
+                        }
+                    },
+                    {
+                        "#": "8",
+                        "NIP/Nama": "FANINA RACHMI, S.Pd197610312000062001",
+                        "Tgl Mulai": "21 April 2026",
+                        "Tgl Selesai": "22 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127111"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127111/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127111"
+                        }
+                    },
+                    {
+                        "#": "9",
+                        "NIP/Nama": "KIKY SUGIARTI198002222012122003",
+                        "Tgl Mulai": "6 April 2026",
+                        "Tgl Selesai": "8 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127069"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127069/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127069"
+                        }
+                    },
+                    {
+                        "#": "10",
+                        "NIP/Nama": "SELAMAT BUDIANTO, S.AB197605082009031003",
+                        "Tgl Mulai": "6 April 2026",
+                        "Tgl Selesai": "7 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Hulu Sungai Tengah",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127061"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127061/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127061"
+                        }
+                    },
+                    {
+                        "#": "1",
+                        "NIP/Nama": "PRANANING DYAH SULIH SEKARRATRI, S.Tr.Par199801262020122008",
+                        "Tgl Mulai": "1 April 2026",
+                        "Tgl Selesai": "30 April 2026",
+                        "Jenis": "Cuti Melahirkan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Melahirkan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127053"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127053/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127053"
+                        }
+                    },
+                    {
+                        "#": "2",
+                        "NIP/Nama": "MUHAMMAD RISADI., S.Kep., MM198011292009031004",
+                        "Tgl Mulai": "27 April 2026",
+                        "Tgl Selesai": "30 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Bekasi",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127045"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127045/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127045"
+                        }
+                    },
+                    {
+                        "#": "3",
+                        "NIP/Nama": "MUHAMMAD RISADI., S.Kep., MM198011292009031004",
+                        "Tgl Mulai": "6 April 2026",
+                        "Tgl Selesai": "7 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Hulu Sungai Tengah",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127044"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127044/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127044"
+                        }
+                    },
+                    {
+                        "#": "4",
+                        "NIP/Nama": "Hj. INDIRIYANI, SE197602221998032006",
+                        "Tgl Mulai": "24 April 2026",
+                        "Tgl Selesai": "24 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127039"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127039/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127039"
+                        }
+                    },
+                    {
+                        "#": "5",
+                        "NIP/Nama": "RIZA YAMANI, SE198110272009031006",
+                        "Tgl Mulai": "16 April 2026",
+                        "Tgl Selesai": "17 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127037"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127037/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127037"
+                        }
+                    },
+                    {
+                        "#": "6",
+                        "NIP/Nama": "RIZA YAMANI, SE198110272009031006",
+                        "Tgl Mulai": "13 April 2026",
+                        "Tgl Selesai": "15 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127036"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127036/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127036"
+                        }
+                    },
+                    {
+                        "#": "7",
+                        "NIP/Nama": "MUHAMMAD AFRIANSYAH, ST198110192010011010",
+                        "Tgl Mulai": "15 April 2026",
+                        "Tgl Selesai": "16 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Palangkaraya",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127035"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127035/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127035"
+                        }
+                    },
+                    {
+                        "#": "8",
+                        "NIP/Nama": "WIDYA PELISSA, S.Pi, MM197402102007012013",
+                        "Tgl Mulai": "13 April 2026",
+                        "Tgl Selesai": "15 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127034"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127034/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127034"
+                        }
+                    },
+                    {
+                        "#": "9",
+                        "NIP/Nama": "JATAYU LANANG PRATAMA, SST.Par199301082022031002",
+                        "Tgl Mulai": "13 April 2026",
+                        "Tgl Selesai": "15 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127033"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/127033/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/127033"
+                        }
+                    },
+                    {
+                        "#": "10",
+                        "NIP/Nama": "Muhammad Shaifullah.T,S.Sos197105021991031005",
+                        "Tgl Mulai": "15 April 2026",
+                        "Tgl Selesai": "16 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Menghadiri HLM dan Capacity Building Tim Percepatan di Palangkaraya",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/126975"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/126975/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/126975"
+                        }
+                    },
+                    {
+                        "#": "1",
+                        "NIP/Nama": "Dr. IBNU SABIL, S.STP, M.AP198303282001121001",
+                        "Tgl Mulai": "22 April 2026",
+                        "Tgl Selesai": "22 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Rakernis Keolahragaan Dispora Provinsi Kalimantan Selatan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/125520"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/125520/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/125520"
+                        }
+                    },
+                    {
+                        "#": "2",
+                        "NIP/Nama": "PONIDI YUSUF, S.Sos196806211990031008",
+                        "Tgl Mulai": "14 April 2026",
+                        "Tgl Selesai": "17 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124902"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124902/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124902"
+                        }
+                    },
+                    {
+                        "#": "3",
+                        "NIP/Nama": "Hj. LILY ROSYADAH, SE197001051995032001",
+                        "Tgl Mulai": "13 April 2026",
+                        "Tgl Selesai": "16 April 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124901"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124901/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124901"
+                        }
+                    },
+                    {
+                        "#": "4",
+                        "NIP/Nama": "Dr. IBNU SABIL, S.STP, M.AP198303282001121001",
+                        "Tgl Mulai": "10 April 2026",
+                        "Tgl Selesai": "14 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Jakarta",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124795"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124795/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124795"
+                        }
+                    },
+                    {
+                        "#": "5",
+                        "NIP/Nama": "Dr. IBNU SABIL, S.STP, M.AP198303282001121001",
+                        "Tgl Mulai": "15 April 2026",
+                        "Tgl Selesai": "16 April 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Palangkaeaya",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124793"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124793/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124793"
+                        }
+                    },
+                    {
+                        "#": "6",
+                        "NIP/Nama": "Hj. INDIRIYANI, SE197602221998032006",
+                        "Tgl Mulai": "5 Maret 2026",
+                        "Tgl Selesai": "5 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124332"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124332/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124332"
+                        }
+                    },
+                    {
+                        "#": "7",
+                        "NIP/Nama": "WULAN ROSMAYA, SE198706232020122010",
+                        "Tgl Mulai": "30 Maret 2026",
+                        "Tgl Selesai": "30 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124331"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124331/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124331"
+                        }
+                    },
+                    {
+                        "#": "8",
+                        "NIP/Nama": "DEWI MAS ULA, S.Pd199504292025042001",
+                        "Tgl Mulai": "30 Maret 2026",
+                        "Tgl Selesai": "31 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124330"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124330/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124330"
+                        }
+                    },
+                    {
+                        "#": "9",
+                        "NIP/Nama": "DEWI MAS ULA, S.Pd199504292025042001",
+                        "Tgl Mulai": "25 Maret 2026",
+                        "Tgl Selesai": "27 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124329"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124329/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124329"
+                        }
+                    },
+                    {
+                        "#": "10",
+                        "NIP/Nama": "JIHAD MUNGGARAN, S.Pd.199904152022031004",
+                        "Tgl Mulai": "16 Maret 2026",
+                        "Tgl Selesai": "27 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124326"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124326/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124326"
+                        }
+                    },
+                    {
+                        "#": "1",
+                        "NIP/Nama": "MUHAMMAD TEGAR WILAKSANA, M.Or199710252020121010",
+                        "Tgl Mulai": "16 Februari 2026",
+                        "Tgl Selesai": "17 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124325"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124325/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124325"
+                        }
+                    },
+                    {
+                        "#": "2",
+                        "NIP/Nama": "PUJO LAKSONO, SE199001232022031002",
+                        "Tgl Mulai": "25 Maret 2026",
+                        "Tgl Selesai": "27 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124324"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124324/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124324"
+                        }
+                    },
+                    {
+                        "#": "3",
+                        "NIP/Nama": "PRANANING DYAH SULIH SEKARRATRI, S.Tr.Par199801262020122008",
+                        "Tgl Mulai": "1 Maret 2026",
+                        "Tgl Selesai": "31 Maret 2026",
+                        "Jenis": "Cuti Melahirkan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Melahirkan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124233"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124233/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124233"
+                        }
+                    },
+                    {
+                        "#": "4",
+                        "NIP/Nama": "WIDYA PELISSA, S.Pi, MM197402102007012013",
+                        "Tgl Mulai": "3 Maret 2026",
+                        "Tgl Selesai": "3 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124039"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124039/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124039"
+                        }
+                    },
+                    {
+                        "#": "5",
+                        "NIP/Nama": "MUHAMMAD AFRIANSYAH, ST198110192010011010",
+                        "Tgl Mulai": "27 Maret 2026",
+                        "Tgl Selesai": "29 Maret 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Kotabau",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124038"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/124038/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/124038"
+                        }
+                    },
+                    {
+                        "#": "6",
+                        "NIP/Nama": "FITRI HANDAYANI, SE198108032007012004",
+                        "Tgl Mulai": "2 Maret 2026",
+                        "Tgl Selesai": "13 Maret 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/123570"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/123570/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/123570"
+                        }
+                    },
+                    {
+                        "#": "7",
+                        "NIP/Nama": "Dr. IBNU SABIL, S.STP, M.AP198303282001121001",
+                        "Tgl Mulai": "27 Maret 2026",
+                        "Tgl Selesai": "29 Maret 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Ke Kotabau",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/123569"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/123569/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/123569"
+                        }
+                    },
+                    {
+                        "#": "8",
+                        "NIP/Nama": "NONIK MUTHIA, A.Md199601162020122017",
+                        "Tgl Mulai": "26 Februari 2026",
+                        "Tgl Selesai": "27 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122358"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122358/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122358"
+                        }
+                    },
+                    {
+                        "#": "9",
+                        "NIP/Nama": "PRANANING DYAH SULIH SEKARRATRI, S.Tr.Par199801262020122008",
+                        "Tgl Mulai": "23 Februari 2026",
+                        "Tgl Selesai": "27 Februari 2026",
+                        "Jenis": "Cuti Lain-Lain",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Melahirkan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122356"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122356/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122356"
+                        }
+                    },
+                    {
+                        "#": "10",
+                        "NIP/Nama": "Dr. IBNU SABIL, S.STP, M.AP198303282001121001",
+                        "Tgl Mulai": "5 Februari 2026",
+                        "Tgl Selesai": "8 Februari 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Acara COE di Bali",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122354"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122354/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122354"
+                        }
+                    },
+                    {
+                        "#": "1",
+                        "NIP/Nama": "Hj. INDIRIYANI, SE197602221998032006",
+                        "Tgl Mulai": "13 Februari 2026",
+                        "Tgl Selesai": "13 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122353"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122353/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122353"
+                        }
+                    },
+                    {
+                        "#": "2",
+                        "NIP/Nama": "BAHDIAH, S.Ag197605312006042004",
+                        "Tgl Mulai": "9 Februari 2026",
+                        "Tgl Selesai": "13 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122352"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122352/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122352"
+                        }
+                    },
+                    {
+                        "#": "3",
+                        "NIP/Nama": "BAHDIAH, S.Ag197605312006042004",
+                        "Tgl Mulai": "6 Februari 2026",
+                        "Tgl Selesai": "8 Februari 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Acara COE di Bali",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122351"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122351/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122351"
+                        }
+                    },
+                    {
+                        "#": "4",
+                        "NIP/Nama": "PONIDI YUSUF, S.Sos196806211990031008",
+                        "Tgl Mulai": "6 Februari 2026",
+                        "Tgl Selesai": "8 Februari 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Acara COE di Bali",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122350"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122350/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122350"
+                        }
+                    },
+                    {
+                        "#": "5",
+                        "NIP/Nama": "Hj. INDIRIYANI, SE197602221998032006",
+                        "Tgl Mulai": "23 Februari 2026",
+                        "Tgl Selesai": "27 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122349"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122349/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122349"
+                        }
+                    },
+                    {
+                        "#": "6",
+                        "NIP/Nama": "ANDY PAHWANDA, SE, MM197411102009011002",
+                        "Tgl Mulai": "6 Februari 2026",
+                        "Tgl Selesai": "8 Februari 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Acara COE di Bali",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122348"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122348/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122348"
+                        }
+                    },
+                    {
+                        "#": "7",
+                        "NIP/Nama": "YOYOK BUDI SANTOSO, A.Md.198209202010011015",
+                        "Tgl Mulai": "6 Februari 2026",
+                        "Tgl Selesai": "8 Februari 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Acara COE di Bali",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122347"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122347/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122347"
+                        }
+                    },
+                    {
+                        "#": "8",
+                        "NIP/Nama": "JOHAR ARIEF, ST197506112006041021",
+                        "Tgl Mulai": "25 Februari 2026",
+                        "Tgl Selesai": "26 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122344"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122344/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122344"
+                        }
+                    },
+                    {
+                        "#": "9",
+                        "NIP/Nama": "HIDAYATUL FIKRI, M. I.Kom197810122006041003",
+                        "Tgl Mulai": "2 Februari 2026",
+                        "Tgl Selesai": "4 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122305"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122305/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122305"
+                        }
+                    },
+                    {
+                        "#": "10",
+                        "NIP/Nama": "WIDYA PELISSA, S.Pi, MM197402102007012013",
+                        "Tgl Mulai": "9 Februari 2026",
+                        "Tgl Selesai": "11 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122301"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122301/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122301"
+                        }
+                    },
+                    {
+                        "#": "1",
+                        "NIP/Nama": "WIDYA PELISSA, S.Pi, MM197402102007012013",
+                        "Tgl Mulai": "4 Februari 2026",
+                        "Tgl Selesai": "6 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122300"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122300/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122300"
+                        }
+                    },
+                    {
+                        "#": "2",
+                        "NIP/Nama": "EMIL SALIM, ST, MA197409132000031006",
+                        "Tgl Mulai": "6 Februari 2026",
+                        "Tgl Selesai": "8 Februari 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Acara COE di Bali",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122299"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122299/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122299"
+                        }
+                    },
+                    {
+                        "#": "3",
+                        "NIP/Nama": "FITRIAH, SE, MM197707052007012034",
+                        "Tgl Mulai": "12 Februari 2026",
+                        "Tgl Selesai": "20 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122298"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122298/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122298"
+                        }
+                    },
+                    {
+                        "#": "4",
+                        "NIP/Nama": "M. ANNURI RAHMAN, A.Md198905312010011001",
+                        "Tgl Mulai": "6 Februari 2026",
+                        "Tgl Selesai": "8 Februari 2026",
+                        "Jenis": "Tugas Kantor/Dinas/SPPD",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Acara COE di Bali",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122292"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122292/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122292"
+                        }
+                    },
+                    {
+                        "#": "5",
+                        "NIP/Nama": "FANINA RACHMI, S.Pd197610312000062001",
+                        "Tgl Mulai": "24 Februari 2026",
+                        "Tgl Selesai": "24 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122282"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122282/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122282"
+                        }
+                    },
+                    {
+                        "#": "6",
+                        "NIP/Nama": "FANINA RACHMI, S.Pd197610312000062001",
+                        "Tgl Mulai": "13 Februari 2026",
+                        "Tgl Selesai": "13 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122281"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122281/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122281"
+                        }
+                    },
+                    {
+                        "#": "7",
+                        "NIP/Nama": "SIHABIDIN197609092007011016",
+                        "Tgl Mulai": "26 Februari 2026",
+                        "Tgl Selesai": "27 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122279"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/122279/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/122279"
+                        }
+                    },
+                    {
+                        "#": "8",
+                        "NIP/Nama": "PRANANING DYAH SULIH SEKARRATRI, S.Tr.Par199801262020122008",
+                        "Tgl Mulai": "9 Februari 2026",
+                        "Tgl Selesai": "13 Februari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/121019"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/121019/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/121019"
+                        }
+                    },
+                    {
+                        "#": "9",
+                        "NIP/Nama": "YENNY FITRI ANGGRAINI, S. A.B.199503102022032011",
+                        "Tgl Mulai": "27 Januari 2026",
+                        "Tgl Selesai": "27 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120389"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/120389/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120389"
+                        }
+                    },
+                    {
+                        "#": "10",
+                        "NIP/Nama": "Hj. INDIRIYANI, SE197602221998032006",
+                        "Tgl Mulai": "23 Januari 2026",
+                        "Tgl Selesai": "23 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120200"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/120200/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120200"
+                        }
+                    },
+                    {
+                        "#": "1",
+                        "NIP/Nama": "RIZKY MUTHIA APNI, S.M.197904202009012001",
+                        "Tgl Mulai": "2 Januari 2026",
+                        "Tgl Selesai": "2 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120168"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/120168/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120168"
+                        }
+                    },
+                    {
+                        "#": "2",
+                        "NIP/Nama": "PRANANING DYAH SULIH SEKARRATRI, S.Tr.Par199801262020122008",
+                        "Tgl Mulai": "2 Januari 2026",
+                        "Tgl Selesai": "2 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120167"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/120167/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120167"
+                        }
+                    },
+                    {
+                        "#": "3",
+                        "NIP/Nama": "LIA NURUL HAYATI, SE198812062010012002",
+                        "Tgl Mulai": "2 Januari 2026",
+                        "Tgl Selesai": "19 Januari 2026",
+                        "Jenis": "Cuti Lain-Lain",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Melahirkan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120166"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/120166/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120166"
+                        }
+                    },
+                    {
+                        "#": "4",
+                        "NIP/Nama": "PUJO LAKSONO, SE199001232022031002",
+                        "Tgl Mulai": "22 Januari 2026",
+                        "Tgl Selesai": "23 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120164"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/120164/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120164"
+                        }
+                    },
+                    {
+                        "#": "5",
+                        "NIP/Nama": "NONIK MUTHIA, A.Md199601162020122017",
+                        "Tgl Mulai": "5 Januari 2026",
+                        "Tgl Selesai": "5 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120163"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/120163/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120163"
+                        }
+                    },
+                    {
+                        "#": "6",
+                        "NIP/Nama": "NONIK MUTHIA, A.Md199601162020122017",
+                        "Tgl Mulai": "2 Januari 2026",
+                        "Tgl Selesai": "2 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120160"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/120160/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/120160"
+                        }
+                    },
+                    {
+                        "#": "7",
+                        "NIP/Nama": "KIKY SUGIARTI198002222012122003",
+                        "Tgl Mulai": "19 Januari 2026",
+                        "Tgl Selesai": "21 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/119808"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/119808/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/119808"
+                        }
+                    },
+                    {
+                        "#": "8",
+                        "NIP/Nama": "ARIEF RAKHMAN HAKIM, ST196902071993031008",
+                        "Tgl Mulai": "19 Januari 2026",
+                        "Tgl Selesai": "22 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/119758"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/119758/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/119758"
+                        }
+                    },
+                    {
+                        "#": "9",
+                        "NIP/Nama": "HIDAYATUL FIKRI, M. I.Kom197810122006041003",
+                        "Tgl Mulai": "22 Januari 2026",
+                        "Tgl Selesai": "23 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/119293"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/119293/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/119293"
+                        }
+                    },
+                    {
+                        "#": "10",
+                        "NIP/Nama": "HIDAYATUL FIKRI, M. I.Kom197810122006041003",
+                        "Tgl Mulai": "26 Januari 2026",
+                        "Tgl Selesai": "30 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118980"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/118980/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118980"
+                        }
+                    },
+                    {
+                        "#": "1",
+                        "NIP/Nama": "EMIL SALIM, ST, MA197409132000031006",
+                        "Tgl Mulai": "27 Januari 2026",
+                        "Tgl Selesai": "30 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118978"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/118978/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118978"
+                        }
+                    },
+                    {
+                        "#": "2",
+                        "NIP/Nama": "WIDYA PELISSA, S.Pi, MM197402102007012013",
+                        "Tgl Mulai": "2 Januari 2026",
+                        "Tgl Selesai": "2 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118591"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/118591/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118591"
+                        }
+                    },
+                    {
+                        "#": "3",
+                        "NIP/Nama": "EMIL SALIM, ST, MA197409132000031006",
+                        "Tgl Mulai": "27 Januari 2026",
+                        "Tgl Selesai": "30 Januari 2026",
+                        "Jenis": "Alpha",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118590"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/118590/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118590"
+                        }
+                    },
+                    {
+                        "#": "4",
+                        "NIP/Nama": "FITRIAH, SE, MM197707052007012034",
+                        "Tgl Mulai": "2 Januari 2026",
+                        "Tgl Selesai": "2 Januari 2026",
+                        "Jenis": "Cuti Tahunan",
+                        "Dokumen": "Upload",
+                        "Keterangan": "Cuti Tahunan",
+                        "Aksi": "Rekap Delete",
+                        "_links": [
+                            {
+                                "header": "Dokumen",
+                                "label": "Upload",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118429"
+                            },
+                            {
+                                "header": "Aksi",
+                                "label": "Rekap",
+                                "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/118429/rekap"
+                            }
+                        ],
+                        "_upload": {
+                            "header": "Dokumen",
+                            "label": "Upload",
+                            "url": "https://absensi.banjarmasinkota.go.id/admin/cuti/upload/118429"
+                        }
                     }
                 ]
             }

@@ -33,7 +33,11 @@
                 </a>
                 <a href="{{ route('cms.laporan-absensi-harian.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
                     <i data-lucide="calendar-check" class="h-4 w-4"></i>
-                    Laporan Absensi
+                    Laporan Absensi PNS
+                </a>
+                <a href="{{ route('cms.laporan-pppk.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
+                    <i data-lucide="id-card" class="h-4 w-4"></i>
+                    Laporan Absensi PPPK
                 </a>
                 <a href="{{ route('cms.laporan-balai-kota.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
                     <i data-lucide="building-2" class="h-4 w-4"></i>
@@ -41,7 +45,7 @@
                 </a>
                 <a href="{{ route('cms.pegawai.index') }}" class="flex items-center gap-3 rounded-md bg-white/10 px-3 py-2 text-sm font-medium">
                     <i data-lucide="users" class="h-4 w-4"></i>
-                    Pegawai
+                    ASN
                 </a>
                 <a href="{{ route('absensi-scraper.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
                     <i data-lucide="braces" class="h-4 w-4"></i>
@@ -109,11 +113,17 @@
                         @if (is_array($result))
                             <div class="mt-4 rounded-md border {{ ($result['success'] ?? false) ? 'border-emerald-200 bg-emerald-50 text-emerald-800' : 'border-amber-200 bg-amber-50 text-amber-800' }} px-3 py-2 text-sm">
                                 <div class="font-medium">
-                                    Tersimpan {{ number_format($result['summary']['stored_rows'] ?? 0) }} baris.
+                                    @if ($result['success'] ?? false)
+                                        Tersimpan {{ number_format($result['summary']['stored_rows'] ?? 0) }} baris.
+                                    @else
+                                        {{ $result['message'] ?? 'Fetch pegawai gagal.' }}
+                                    @endif
                                 </div>
-                                <div class="mt-1 text-xs">
-                                    Dibaca {{ number_format($result['summary']['page_count'] ?? 0) }} halaman, parsed {{ number_format($result['summary']['parsed_rows'] ?? 0) }} baris.
-                                </div>
+                                @if ($result['success'] ?? false)
+                                    <div class="mt-1 text-xs">
+                                        Dibaca {{ number_format($result['summary']['page_count'] ?? 0) }} halaman, parsed {{ number_format($result['summary']['parsed_rows'] ?? 0) }} baris.
+                                    </div>
+                                @endif
                             </div>
                         @endif
 
@@ -148,13 +158,14 @@
                         </div>
 
                         <div class="overflow-x-auto">
-                            <table class="min-w-[1280px] table-fixed divide-y divide-zinc-200 text-sm xl:min-w-full">
+                            <table class="min-w-[1440px] table-fixed divide-y divide-zinc-200 text-sm xl:min-w-full">
                                 <thead class="bg-zinc-50">
                                     <tr>
                                         <th class="w-48 whitespace-nowrap px-4 py-3 text-left font-semibold text-zinc-600">NIP</th>
                                         <th class="w-72 whitespace-nowrap px-4 py-3 text-left font-semibold text-zinc-600">Nama</th>
                                         <th class="w-56 whitespace-nowrap px-4 py-3 text-left font-semibold text-zinc-600">Pangkat</th>
                                         <th class="w-72 whitespace-nowrap px-4 py-3 text-left font-semibold text-zinc-600">SKPD</th>
+                                        <th class="w-72 whitespace-nowrap px-4 py-3 text-left font-semibold text-zinc-600">Unit Kerja</th>
                                         <th class="w-72 whitespace-nowrap px-4 py-3 text-left font-semibold text-zinc-600">Jabatan</th>
                                         <th class="w-48 whitespace-nowrap px-4 py-3 text-left font-semibold text-zinc-600">Device</th>
                                         <th class="w-32 whitespace-nowrap px-4 py-3 text-left font-semibold text-zinc-600">History</th>
@@ -167,6 +178,7 @@
                                             <td class="px-4 py-3 text-zinc-700">{{ $row->nama ?: '-' }}</td>
                                             <td class="px-4 py-3 text-zinc-700">{{ $row->pangkat_golongan ?: '-' }}</td>
                                             <td class="px-4 py-3 text-zinc-700">{{ $row->skpd ?: '-' }}</td>
+                                            <td class="px-4 py-3 text-zinc-700">{{ $row->unit_kerja ?: '-' }}</td>
                                             <td class="px-4 py-3 text-zinc-700">{{ $row->jabatan ?: '-' }}</td>
                                             <td class="px-4 py-3 text-zinc-700">{{ $row->device_id ?: '-' }}</td>
                                             <td class="whitespace-nowrap px-4 py-3">
@@ -182,7 +194,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="7" class="px-6 py-12 text-center text-sm text-zinc-500">
+                                            <td colspan="8" class="px-6 py-12 text-center text-sm text-zinc-500">
                                                 Belum ada data pegawai di database.
                                             </td>
                                         </tr>
