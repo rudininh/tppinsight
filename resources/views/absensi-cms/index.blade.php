@@ -46,6 +46,10 @@
                     <i data-lucide="file-spreadsheet" class="h-4 w-4"></i>
                     Laporan Cuti
                 </a>
+                <a href="{{ route('cms.pegawai.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
+                    <i data-lucide="users" class="h-4 w-4"></i>
+                    Pegawai
+                </a>
                 <a href="{{ route('absensi-scraper.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
                     <i data-lucide="braces" class="h-4 w-4"></i>
                     API Scraper

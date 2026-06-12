@@ -11,7 +11,10 @@ Route::prefix('cms')->name('cms.')->group(function () {
     Route::get('/absensi-cuti', [AbsensiCmsController::class, 'index'])->name('absensi-cuti.index');
     Route::post('/absensi-cuti/fetch', [AbsensiCmsController::class, 'fetchCuti'])->name('absensi-cuti.fetch');
     Route::get('/laporan-cuti', [AbsensiCmsController::class, 'laporanCuti'])->name('laporan-cuti.index');
+    Route::get('/laporan-cuti/export', [AbsensiCmsController::class, 'exportLaporanCuti'])->name('laporan-cuti.export');
     Route::post('/laporan-cuti/fetch-all', [AbsensiCmsController::class, 'fetchAllCuti'])->name('laporan-cuti.fetch-all');
+    Route::get('/pegawai', [AbsensiCmsController::class, 'pegawai'])->name('pegawai.index');
+    Route::post('/pegawai/fetch', [AbsensiCmsController::class, 'fetchPegawai'])->name('pegawai.fetch');
 });
 
 Route::prefix('absensi-scraper')->name('absensi-scraper.')->group(function () {

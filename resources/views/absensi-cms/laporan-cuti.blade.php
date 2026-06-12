@@ -31,6 +31,10 @@
                     <i data-lucide="file-spreadsheet" class="h-4 w-4"></i>
                     Laporan Cuti
                 </a>
+                <a href="{{ route('cms.pegawai.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
+                    <i data-lucide="users" class="h-4 w-4"></i>
+                    Pegawai
+                </a>
                 <a href="{{ route('absensi-scraper.index') }}" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-zinc-300 hover:bg-white/10 hover:text-white">
                     <i data-lucide="braces" class="h-4 w-4"></i>
                     API Scraper
@@ -153,23 +157,39 @@
                             <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                                 <div>
                                     <h2 class="text-base font-semibold">Data Tersimpan</h2>
-                                    <p class="text-sm text-zinc-500">Menampilkan 100 data per halaman. Gunakan pencarian atau pilih SKPD.</p>
+                                    <p class="text-sm text-zinc-500">Menampilkan 100 data per halaman. Filter data lalu export sesuai kebutuhan.</p>
                                 </div>
-                                <form method="GET" action="{{ route('cms.laporan-cuti.index') }}" class="flex flex-col gap-2 lg:flex-row">
-                                    <input name="search" type="search" value="{{ request('search') }}" placeholder="Cari laporan"
-                                        class="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 lg:w-72">
-                                    <select name="skpd_id" class="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 lg:w-64">
-                                        <option value="">Semua SKPD</option>
-                                        @foreach ($skpdOptions as $option)
-                                            <option value="{{ $option['id'] }}" @selected((string) request('skpd_id') === (string) $option['id'])>{{ $option['label'] }}</option>
-                                        @endforeach
-                                    </select>
+                            </div>
+                            <form method="GET" action="{{ route('cms.laporan-cuti.index') }}" class="mt-4 grid gap-2 md:grid-cols-2 xl:grid-cols-6">
+                                <input name="search" type="search" value="{{ request('search') }}" placeholder="Cari laporan"
+                                    class="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 xl:col-span-2">
+                                <input name="date_start" type="date" value="{{ request('date_start', $dateStart) }}"
+                                    class="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100">
+                                <input name="date_end" type="date" value="{{ request('date_end', $dateEnd) }}"
+                                    class="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100">
+                                <select name="skpd_id" class="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100">
+                                    <option value="">Semua SKPD</option>
+                                    @foreach ($skpdOptions as $option)
+                                        <option value="{{ $option['id'] }}" @selected((string) request('skpd_id') === (string) $option['id'])>{{ $option['label'] }}</option>
+                                    @endforeach
+                                </select>
+                                <select name="jenis_cuti" class="w-full rounded-md border border-zinc-300 px-3 py-2 text-sm outline-none focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100">
+                                    <option value="">Semua Jenis</option>
+                                    @foreach ($jenisOptions as $jenis)
+                                        <option value="{{ $jenis }}" @selected((string) request('jenis_cuti') === (string) $jenis)>{{ $jenis }}</option>
+                                    @endforeach
+                                </select>
+                                <div class="flex gap-2 md:col-span-2 xl:col-span-6 xl:justify-end">
                                     <button type="submit" class="inline-flex items-center justify-center gap-2 rounded-md border border-zinc-300 px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50">
                                         <i data-lucide="search" class="h-4 w-4"></i>
                                         Filter
                                     </button>
-                                </form>
-                            </div>
+                                    <button type="submit" formaction="{{ route('cms.laporan-cuti.export') }}" class="inline-flex items-center justify-center gap-2 rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white hover:bg-emerald-700">
+                                        <i data-lucide="file-down" class="h-4 w-4"></i>
+                                        Export Excel
+                                    </button>
+                                </div>
+                            </form>
                         </div>
 
                         <div class="overflow-x-auto">
